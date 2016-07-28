@@ -203,6 +203,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607281600590_InitialCreate.cs" />
+    <Compile Include="Migrations\201607281600590_InitialCreate.Designer.cs">
+      <DependentUpon>201607281600590_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607281822236_AddPictureToPost.cs" />
+    <Compile Include="Migrations\201607281822236_AddPictureToPost.Designer.cs">
+      <DependentUpon>201607281822236_AddPictureToPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -217,6 +226,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\dragon.jpg" />
+    <Content Include="Content\Images\fire.jpg" />
     <Content Include="Content\Images\raven.jpg" />
     <Content Include="Content\Images\robertcartoon.png" />
     <Content Include="Content\Images\scroll.png" />
@@ -303,6 +313,14 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607281600590_InitialCreate.resx">
+      <DependentUpon>201607281600590_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607281822236_AddPictureToPost.resx">
+      <DependentUpon>201607281822236_AddPictureToPost.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

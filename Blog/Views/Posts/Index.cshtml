@@ -4,11 +4,37 @@
     ViewBag.Title = "Fireside Stories";
 }
 
-<h2>Index</h2>
+<h2>Fireside Stories</h2>
+
+<img src="~/Content/Images/fire.jpg" />
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-md-8 whiteBorder scroll">
+            <div class="postName">
+                <h4>@Html.DisplayFor(modelItem => item.PostName)</h4>
+                <h4>Written by: @Html.DisplayFor(modelItem => item.UserName)</h4>
+                <img src="@Html.DisplayFor(modelItem => item.PostImage)"/>
+            </div>
+            <div class="postContent">
+                <p>@Html.DisplayFor(modelItem => item.PostContent)</p>
+            </div>
+        </div>
+        <div class="col-md-4 whiteBorder scroll">
+            <h4>Comments</h4>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PostId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PostId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PostId })
+            </p>
+        </div>
+    </div>
+}
 <table class="table">
     <tr>
         <th>

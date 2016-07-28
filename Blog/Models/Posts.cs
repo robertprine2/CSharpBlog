@@ -10,11 +10,14 @@ namespace Blog.Models
     {
         [Key]
         public string PostId { get; set; }
-        
+
+        [Required]
         public string UserId { get; set; }
 
         [Required]
         public string PostSubject { get; set; }
+
+        public string PostImage { get; set; }
 
         [Required]
         public string UserName { get; set; }

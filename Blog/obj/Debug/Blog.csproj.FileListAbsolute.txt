@@ -176,3 +176,6 @@ C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\bin\roslyn\System.IO.FileSystem.dl
 C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\bin\roslyn\vbc.exe.config
 C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\bin\roslyn\vbc.rsp
+C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\obj\Debug\Blog.Migrations.InitialCreate.resources
+C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\obj\Debug\Blog.csproj.GenerateResource.Cache
+C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\obj\Debug\Blog.Migrations.AddPictureToPost.resources
