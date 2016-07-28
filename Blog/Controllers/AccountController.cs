@@ -155,6 +155,10 @@ namespace Blog.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var db = new ApplicationDbContext();
+                    var postId = 472893 + (db.Posts.Count()).ToString().PadLeft(10, '0');
+                    var posts = new Posts { UserId = user.Id, UserName = model.UserName, PostId = postId, PostName = model.PostName };
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
