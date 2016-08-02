@@ -180,3 +180,4 @@ C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\obj\Debug\Blog.Migrations.InitialC
 C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\obj\Debug\Blog.csproj.GenerateResource.Cache
 C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\obj\Debug\Blog.Migrations.AddPictureToPost.resources
 C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\obj\Debug\Blog.Migrations.foo.resources
+C:\Users\rober_000\Desktop\C#\CSharpBlog\Blog\obj\Debug\Blog.Migrations.FixComments.resources

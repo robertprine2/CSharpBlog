@@ -50,9 +50,11 @@ namespace Blog.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Comments.Add(comments);
+                var commentId = (432156 + db.Comments.Count()).ToString().PadLeft(10, '0');
+                var comment = new Comments { CommentId = commentId, PostId = comments.PostId, UserName = "George Filler", PostTime = DateTime.Now, CommentSubject = comments.CommentSubject, CommentContent = comments.CommentContent };
+                db.Comments.Add(comment);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("../Posts");
             }
 
             return View(comments);

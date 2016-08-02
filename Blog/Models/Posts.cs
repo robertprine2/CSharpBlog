@@ -8,12 +8,13 @@ namespace Blog.Models
 {
     public class Posts
     {
+        //Ethan showed me this as a way to hack around getting the postId for the comments
         public Posts()
         {
             PostComments = new List<Comments>();
             NewComment = new Comments()
             {
-                PostId = this.PostId
+                //PostId = this.PostId
             };
         }
 
