@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Blog.Models.Posts>
+<!--I feel as though I should be able to add: @@model Blog.Models.Comments-->
 
 @{
     ViewBag.Title = "Fireside Stories";
@@ -23,15 +24,30 @@
             </div>
             <div class="postContent">
                 <p>@Html.DisplayFor(modelItem => item.PostContent)</p>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PostId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PostId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PostId })
+                </p>
             </div>
         </div>
         <div class="col-md-4 whiteBorder scroll">
             <h4>Comments</h4>
-            <p>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PostId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.PostId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.PostId })
-            </p>
+            <!--Comments attached to this post-->
+            @foreach (var comment in item.PostComments)
+            {
+                <h5>@Html.DisplayFor(modelItem => comment.UserName)</h5>
+                <h5>@Html.DisplayFor(modelItem => comment.CommentSubject)</h5>
+                <p>@Html.DisplayFor(modelItem => comment.CommentContent)</p>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = comment.CommentId }) |
+                    @Html.ActionLink("Details", "Details", new { id = comment.CommentId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = comment.CommentId })               
+                </p>
+            }
+
+            @Html.Partial("AddComment", item.NewComment)
+         
         </div>
     </div>
 }

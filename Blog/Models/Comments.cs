@@ -8,9 +8,14 @@ namespace Blog.Models
 {
     public class Comments
     {
-        public int CommentId { get; set; }
+        [Key]
+        public string CommentId { get; set; }
 
-        public int PostId { get; set; }
+        public virtual string PostId { get; set; }
+
+        public string UserName { get; set; }
+
+        public DateTime PostTime { get; set; }
 
         public string CommentSubject { get; set; }
 

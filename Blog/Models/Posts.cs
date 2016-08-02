@@ -8,6 +8,15 @@ namespace Blog.Models
 {
     public class Posts
     {
+        public Posts()
+        {
+            PostComments = new List<Comments>();
+            NewComment = new Comments()
+            {
+                PostId = this.PostId
+            };
+        }
+
         [Key]
         public string PostId { get; set; }
 
@@ -27,5 +36,11 @@ namespace Blog.Models
 
         [Required]
         public string PostContent { get; set; }
+        
+        public virtual List<Comments> PostComments { get; set; }
+
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public Comments NewComment { get; set; }
+
     }
 }

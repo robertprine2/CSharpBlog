@@ -115,6 +115,33 @@ namespace Blog.Controllers
             return RedirectToAction("Index");
         }
 
+        /*
+        // POST: Posts/Comment
+        [HttpPost, Route("Posts/Comment")]
+        [ValidateAntiForgeryToken]
+        public ActionResult Comment(Comments model)
+        {
+            Posts posts = db.Posts.Find(model.PostId);
+            posts.PostComments.Add(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        // POST: Posts/Comment
+        [HttpPost, Route("Posts/Comment")]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateComment([Bind(Include = "CommentId,PostId,UserName,PostTime,CommentSubject,CommentContent")] Comments comments)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Comments.Add(comments);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(posts);
+        }
+        */
         protected override void Dispose(bool disposing)
         {
             if (disposing)

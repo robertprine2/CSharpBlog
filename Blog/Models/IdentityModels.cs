@@ -30,5 +30,7 @@ namespace Blog.Models
             return new ApplicationDbContext();
         }
         public DbSet<Posts> Posts { get; set; }
+
+        public System.Data.Entity.DbSet<Blog.Models.Comments> Comments { get; set; }
     }
 }

@@ -197,6 +197,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
@@ -210,6 +211,10 @@
     <Compile Include="Migrations\201607281822236_AddPictureToPost.cs" />
     <Compile Include="Migrations\201607281822236_AddPictureToPost.Designer.cs">
       <DependentUpon>201607281822236_AddPictureToPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608011911067_foo.cs" />
+    <Compile Include="Migrations\201608011911067_foo.Designer.cs">
+      <DependentUpon>201608011911067_foo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -304,9 +309,11 @@
     <Content Include="Views\Posts\Details.cshtml" />
     <Content Include="Views\Posts\Edit.cshtml" />
     <Content Include="Views\Posts\Index.cshtml" />
+    <Content Include="Views\Posts\AddComment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Comments\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -320,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607281822236_AddPictureToPost.resx">
       <DependentUpon>201607281822236_AddPictureToPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608011911067_foo.resx">
+      <DependentUpon>201608011911067_foo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
